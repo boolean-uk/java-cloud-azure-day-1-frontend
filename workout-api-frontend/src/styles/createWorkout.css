@@ -1,0 +1,66 @@
+.create-workout-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: rgb(253, 242, 226); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.create-workout-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-workout-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-workout-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.create-workout-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.create-workout-container h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+  
+
+.create-workout-container button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.create-workout-container button:hover {
+    background-color: #45a049;
+}
+  
+.create-workout-container button[type="button"] {
+    background-color: #2196f3;
+}
+  
+.create-workout-container button[type="button"]:hover {
+    background-color: #1e88e5;
+}
+  
