@@ -1,0 +1,40 @@
+<h2>My Albums</h2>
+
+<!-- Knapp för att skapa nytt album -->
+<button class="btn" (click)="navigateToCreate()">Create New Album</button>
+
+<!-- Tabell för att visa album -->
+<table class="album-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Number of Tracks</th>
+      <th>Label</th>
+      <th>Artists</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let album of albums">
+      <td>{{ album.title }}</td>
+      <td>{{ album.year }}</td>
+      <td>{{ album.genre }}</td>
+      <td>{{ album.numberOfTracks }}</td>
+      <td>{{ album.label.name }} ({{ album.label.location }})</td>
+      <td>
+        <ul>
+          <li *ngFor="let artist of album.artists">
+            {{ artist.firstName }} {{ artist.lastName }}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <button class="btn edit" (click)="navigateToEdit(album.id)">
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
