@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: navajowhite;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.nav-item {
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
