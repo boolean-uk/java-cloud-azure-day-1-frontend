@@ -1,0 +1,15 @@
+<h2>Labels</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let label of labels">
+      <td>{{ label.name }}</td>
+      <td>{{ label.location }}</td>
+    </tr>
+  </tbody>
+</table>

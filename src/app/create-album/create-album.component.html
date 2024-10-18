@@ -1,0 +1,164 @@
+<h2>Create New Album</h2>
+<div class="form-container">
+  <form (ngSubmit)="addAlbum()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        [(ngModel)]="newAlbum.title"
+        name="title"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="year">Year:</label>
+      <input
+        type="number"
+        id="year"
+        [(ngModel)]="newAlbum.year"
+        name="year"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="genre">Genre:</label>
+      <input
+        type="text"
+        id="genre"
+        [(ngModel)]="newAlbum.genre"
+        name="genre"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfTracks">Number of Tracks:</label>
+      <input
+        type="number"
+        id="numberOfTracks"
+        [(ngModel)]="newAlbum.numberOfTracks"
+        name="numberOfTracks"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="label">Label:</label>
+      <div class="label-input-group">
+        <select id="label" [(ngModel)]="newAlbum.label" name="label" required>
+          <option *ngFor="let label of labels" [value]="label.id">
+            {{ label.name }}
+          </option>
+        </select>
+        <button
+          type="button"
+          class="btn-add-label"
+          (click)="openModal('addLabelModal')"
+        >
+          Add New Label
+        </button>
+      </div>
+    </div>
+
+    <!-- Lägg till en ny label modal -->
+    <div id="addLabelModal" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal('addLabelModal')">&times;</span>
+        <h2>Add New Label</h2>
+        <div class="form-group">
+          <label for="labelName">Name:</label>
+          <input
+            type="text"
+            id="labelName"
+            [(ngModel)]="newLabel.name"
+            name="labelName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="labelLocation">Location:</label>
+          <input
+            type="text"
+            id="labelLocation"
+            [(ngModel)]="newLabel.location"
+            name="labelLocation"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <button type="button" (click)="saveNewLabel()">Save</button>
+      </div>
+    </div>
+
+    <div id="addArtistModal" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal('addArtistModal')"
+          >&times;</span
+        >
+        <h2>Add New Artist</h2>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            [(ngModel)]="newArtist.firstName"
+            name="firstName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            [(ngModel)]="newArtist.lastName"
+            name="lastName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <button type="button" (click)="saveNewArtist()">Save</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="artist">Artist:</label>
+      <div class="artist-input-group">
+        <select id="artist" [(ngModel)]="newArtistId" name="artist">
+          <option *ngFor="let artist of artists" [value]="artist.id">
+            {{ artist.firstName }} {{ artist.lastName }}
+          </option>
+        </select>
+        <button type="button" class="btn-add-artist" (click)="addArtist()">
+          Add
+        </button>
+        <button
+          type="button"
+          class="btn-add-artist"
+          (click)="openModal('addArtistModal')"
+        >
+          Add New Artist
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Artists:</label>
+      <ul class="artist-list">
+        <li *ngFor="let artist of newAlbum.artists" class="artist-item">
+          {{ getArtistName(artist.id) }}
+          <button
+            type="button"
+            class="btn-remove-artist"
+            (click)="removeArtist(artist.id)"
+          >
+            Remove
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <button type="submit" class="btn">Add Album</button>
+  </form>
+</div>

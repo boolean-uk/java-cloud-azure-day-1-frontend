@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+li {
+  margin: 10px 1px;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}

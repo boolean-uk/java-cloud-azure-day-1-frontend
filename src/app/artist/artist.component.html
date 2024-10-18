@@ -1,0 +1,15 @@
+<h2>Artists</h2>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let artist of artists">
+      <td>{{ artist.firstName }}</td>
+      <td>{{ artist.lastName }}</td>
+    </tr>
+  </tbody>
+</table>
