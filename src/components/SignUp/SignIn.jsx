@@ -3,7 +3,7 @@ import { ApiContext } from '../../ApiProvider';
 import { useNavigate } from 'react-router';
 function SignIn() {
     const navigate = useNavigate();
-    const { setToken } = useContext(ApiContext);
+    const { setToken, setUser } = useContext(ApiContext);
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -36,6 +36,8 @@ function SignIn() {
             if (response.ok) {
                 const data = await response.json();
                 setToken(data.token);
+                setUser(data.user);
+                localStorage.setItem('token', data.token);
                 setMessage('Signed in successfully');
                 navigate('/');
 

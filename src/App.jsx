@@ -1,5 +1,5 @@
 import "./App.css";
-import Headers from "./components/header/Header";
+import Header from "./components/header/header";
 import ApiContext from "./ApiProvider";
 import { Route, Routes } from "react-router";
 import SignIn from "./components/SignUp/SignIn";
@@ -13,7 +13,7 @@ function App() {
     <ApiContext>
       <div className="App">
         <header>
-          <Headers />
+          <Header />
         </header>
         <div className="main-container">
           <nav className="left-menu">
