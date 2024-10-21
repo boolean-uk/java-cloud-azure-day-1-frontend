@@ -1,5 +1,7 @@
-# Java Cloud Azure Day 1 - Frontend Repo
+# This is the frontend for my java-cloud-azure-day-1.
+## You will find the backend here:
+https://github.com/LudwigJL/java-cloud-azure-day-1
 
-Fork and clone this repo then add your frontend code to your local copy.
+## This was initially developed in another folder, if you are interested in the commit history please visit this project:
+https://github.com/LudwigJL/club-penguin-frontend
 
-Push it to GitHub and open a PR with it.
