@@ -1,0 +1,77 @@
+
+
+.page-body {
+    background-color: white;
+}
+
+.title-container {
+    background-color: white;
+    padding: 30px;
+
+}
+
+h1 {
+    text-align: center;
+    color: #29a0ed;
+    background-color: white;
+}
+
+.profile-feed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    
+}
+
+.profile-li {
+    background-color: white;
+}
+
+.profile-container {
+    text-align: left;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 500px;
+    height: 25  0px;
+}
+
+.profile-info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-container p {
+    background-color: white;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding-bottom: 20px;
+}
+
+.profile-img img {
+    border-radius: 100%;
+}
+
+
+.penguin-info {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 51, 102);
+    margin: 10px;
+    color: rgb(218, 218, 218);
+}
